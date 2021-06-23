@@ -1,0 +1,4 @@
+waveform-progress {
+  height: var(--waveformHeight, 10rem);
+  width: var(--waveformWidth, 100%);
+}

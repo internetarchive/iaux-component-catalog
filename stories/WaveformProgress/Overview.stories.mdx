@@ -1,0 +1,26 @@
+<Meta title="Demos/WaveformProgress/Overview" />
+
+## Waveform Progress Bar
+
+The Waveform Progress Bar is an image and scrubber bar to display the sound waveform and scrub through the audio. It also supports zones of silence where the waveform will be replaced by a flat bar.
+
+Repo: [https://github.com/internetarchive/iaux](https://github.com/internetarchive/iaux)
+
+NPM Module Name: [`@internetarchive/waveform-progress`](https://www.npmjs.com/package/@internetarchive/waveform-progress)
+
+Example use:
+
+```
+<waveform-progress
+  waveformUrl="./waveform.png"
+  interactive=true
+  percentComplete=27
+  zonesOfSilence=[{ percentStart: 17, percentEnd: 23 }, { percentStart: 48, percentEnd: 51 }]
+  @valuechange=${valueChanged}
+>
+</waveform-progress>
+
+function valueChanged(e) {
+  console.log('value: ', e.detail.value);
+}
+```
