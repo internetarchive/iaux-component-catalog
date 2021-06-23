@@ -1,19 +1,29 @@
 import '@internetarchive/ia-topnav';
-import type { IATopNav } from '@internetarchive/ia-topnav';
 import { html } from 'lit-html';
-import { TopNav } from './TopNav';
+import './topnav.css';
+import { topNavConfig, topNavMenuConfig } from './TopNavConfig';
 
 export default {
   title: 'Demos/TopNav',
-  argTypes: {
-    // hideSearch: { default: false },
-  },
 };
 
-const Template = (args) => TopNav(args);
+const Template = (options: {
+  hideSearch: boolean;
+  screenName: string;
+  username: string;
+}) => html`
+  <ia-topnav
+    .config=${topNavConfig}
+    .menus=${topNavMenuConfig}
+    ?hideSearch=${options.hideSearch}
+    .screenName=${options.screenName}
+    .username=${options.username}
+  >
+  </ia-topnav>
+`;
 
-export const TopNavDemo = Template.bind({});
-TopNavDemo.args = {
+export const Demo = Template.bind({});
+Demo.args = {
   hideSearch: false,
   screenName: '',
   username: ''

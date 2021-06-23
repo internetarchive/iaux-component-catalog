@@ -1,4 +1,4 @@
-export const defaultTopNavConfig: any = {
+export const topNavConfig: any = {
   uploadURL: 'https://archive.org/create',
   eventCategory: 'TopNav',
   waybackPagesArchived: '514 billion',
