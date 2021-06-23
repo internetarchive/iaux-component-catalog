@@ -20,6 +20,7 @@
     "lit-html": "^1.4.1"
   },
   "dependencies": {
-    "@internetarchive/ia-topnav": "^1.1.8"
+    "@internetarchive/ia-topnav": "^1.1.8",
+    "@internetarchive/scrubber-bar": "^0.0.1"
   }
 }

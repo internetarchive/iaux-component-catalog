@@ -1,0 +1,25 @@
+<Meta title="Demos/ScrubberBar/Overview" />
+
+## Scrubber Bar
+
+The Scrubber Bar is a cross-browser scrubber bar that can color the "filled" range independently of the base range. Safari cannot do this natively.
+
+Repo: [https://github.com/internetarchive/iaux](https://github.com/internetarchive/iaux)
+
+NPM Module Name: [`@internetarchive/scrubber-bar`](https://www.npmjs.com/package/@internetarchive/scrubber-bar)
+
+Example use:
+
+```
+<scrubber-bar
+  min=0
+  max=100
+  step=0.1
+  @valuechange=${valueChanged}
+>
+</scrubber-bar>
+
+function valueChanged(e) {
+  console.log('value: ', e.detail.value);
+}
+```
