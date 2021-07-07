@@ -12,10 +12,10 @@
   "license": "AGPL-3.0-only",
   "devDependencies": {
     "@babel/core": "^7.14.6",
-    "@storybook/addon-actions": "^6.2.9",
-    "@storybook/addon-essentials": "^6.2.9",
-    "@storybook/addon-links": "^6.2.9",
-    "@storybook/web-components": "^6.2.9",
+    "@storybook/addon-actions": "^6.3.3",
+    "@storybook/addon-essentials": "^6.3.3",
+    "@storybook/addon-links": "^6.3.3",
+    "@storybook/web-components": "^6.3.3",
     "babel-loader": "^8.2.2",
     "lit-html": "^1.4.1"
   },
