@@ -1,0 +1,47 @@
+<Meta title="Demos/ModalManager/Overview" />
+
+## Modal Manager
+
+The Modal Manager is.
+
+Repo: [https://github.com/internetarchive/iaux-modal-manager](https://github.com/internetarchive/iaux-modal-manager)
+
+NPM Module Name: [`@internetarchive/modal-manager`](https://www.npmjs.com/package/@internetarchive/modal-manager)
+
+Example use:
+
+```
+<!-- index.html -->
+<script type="module">
+  import '@internetarchive/modal-manager';
+  import { ModalConfig } from '@internetarchive/modal-manager';
+</script>
+
+<style>
+  /* add the following styles to ensure proper modal visibility */
+  body.modal-manager-open {
+    overflow: hidden;
+  }
+
+  modal-manager {
+    display: none;
+  }
+
+  modal-manager[mode='open'] {
+    display: block;
+  }
+</style>
+
+<modal-manager></modal-manager>
+
+<script>
+  // show a simple modal
+  const manager = document.querySelector('modal-manager');
+  const config = new ModalConfig();
+  config.headline = 'Hi, Everybody!';
+  config.message = 'Hi, Doctor Nick!';
+  manager.showModal(config)
+
+  // to hide the modal call `closeModal()`:
+  manager.closeModal();
+</script>```

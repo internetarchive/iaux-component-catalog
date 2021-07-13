@@ -1,0 +1,10 @@
+html {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+donation-form {
+  width: 32rem;
+  display: block;
+  margin: auto;
+}

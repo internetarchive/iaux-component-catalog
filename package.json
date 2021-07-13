@@ -20,8 +20,13 @@
     "lit-html": "^1.4.1"
   },
   "dependencies": {
+    "@internetarchive/donation-form": "^0.5.0",
+    "@internetarchive/donation-form-data-models": "^0.3.1",
     "@internetarchive/ia-topnav": "^1.1.8",
+    "@internetarchive/modal-manager": "^0.1.0",
     "@internetarchive/scrubber-bar": "^0.0.1",
+    "@internetarchive/search-service": "^0.1.2",
+    "@internetarchive/user-service": "^0.1.0",
     "@internetarchive/waveform-progress": "^0.0.1"
   }
 }

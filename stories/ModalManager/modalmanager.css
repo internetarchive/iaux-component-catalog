@@ -1,0 +1,16 @@
+html {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+body.modal-manager-open {
+  overflow: hidden;
+}
+
+modal-manager {
+  display: none;
+}
+
+modal-manager[mode='open'] {
+  display: block;
+}
