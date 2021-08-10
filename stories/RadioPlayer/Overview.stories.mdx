@@ -1,0 +1,26 @@
+<Meta title="Demos/RadioPlayer/Overview" />
+
+## Radio Player
+
+The Radio Player provides an music player with a transcript view that follows along.
+
+Repo: [https://github.com/internetarchive/iaux](https://github.com/internetarchive/iaux)
+
+NPM Module Name: [`@internetarchive/radio-player`](https://www.npmjs.com/package/@internetarchive/radio-player)
+
+Example use:
+
+```
+<scrubber-bar
+  min=0
+  max=100
+  step=0.1
+  value=5
+  @valuechange=${valueChanged}
+>
+</scrubber-bar>
+
+function valueChanged(e) {
+  console.log('value: ', e.detail.value);
+}
+```
