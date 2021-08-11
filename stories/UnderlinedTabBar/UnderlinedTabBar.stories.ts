@@ -17,6 +17,9 @@ export default {
     underlineColor: {
       control: { type: 'color' }
     },
+    loadingDotColor: {
+      control: { type: 'color' }
+    },
   }
 };
 
@@ -27,12 +30,14 @@ const Template = (options: {
   mainBackgroundColor?: string;
   tabTextColor?: string;
   underlineColor?: string;
+  loadingDotColor?: string;
 }) => {
   const styleContainer = document.documentElement.style;
   if (options.underLineThick) styleContainer.setProperty('--underLineThick', `${options.underLineThick}px`);
   if (options.mainBackgroundColor) styleContainer.setProperty('--mainBackgroundColor', options.mainBackgroundColor);
   if (options.tabTextColor) styleContainer.setProperty('--tabTextColor', options.tabTextColor);
   if (options.underlineColor) styleContainer.setProperty('--underlineColor', options.underlineColor);
+  if (options.loadingDotColor) styleContainer.setProperty('--loadingDotColor', options.loadingDotColor);
 
   return html`
     
@@ -60,4 +65,5 @@ Demo.args = {
   mainBackgroundColor: '#a38064',
   tabTextColor: '#e9ecf0',
   underlineColor: '#e9ecf0',
+  loadingDotColor: '#e9ecf0',
 };
