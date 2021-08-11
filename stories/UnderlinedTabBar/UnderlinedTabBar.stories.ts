@@ -1,6 +1,7 @@
 import { html } from 'lit-html';
 import '@internetarchive/underlined-tab-bar';
 
+
 export default {
   title: 'Demos/UnderlinedTabBar',
   argTypes: {
@@ -21,7 +22,7 @@ export default {
 
 const Template = (options: {
   itemClicked: number;
-  loadControl: boolean;
+  isLoading: boolean;
   underLineThick?: number;
   mainBackgroundColor?: string;
   tabTextColor?: string;
@@ -36,6 +37,7 @@ const Template = (options: {
   return html`
     
     <iaux-underlined-tab-bar
+      ?isLoading=${options.isLoading}
         onitemclicked=${options.itemClicked}
         .entries=${[
           { displayName: 'UPLOADS' },
@@ -46,13 +48,14 @@ const Template = (options: {
           { displayName: 'WEB ARCHIVE' },
         ]}
       >
+      
       </iaux-underlined-tab-bar>
     `
 };
 
 export const Demo = Template.bind({});
 Demo.args = {
-  loadControl: false,
+  isLoading: false,
   underLineThick: 2,
   mainBackgroundColor: '#a38064',
   tabTextColor: '#e9ecf0',
