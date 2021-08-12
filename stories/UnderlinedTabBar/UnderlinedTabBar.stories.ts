@@ -17,6 +17,9 @@ export default {
     tabTextColor: {
       control: { type: 'color' }
     },
+    selectedTabTextColor: {
+      control: { type: 'color' }
+    },
     underlineColor: {
       control: { type: 'color' }
     },
@@ -34,12 +37,14 @@ const Template = (options: {
   underLineThickness?: number;
   mainBackgroundColor?: string;
   tabTextColor?: string;
+  selectedTabTextColor?: string;
   underlineColor?: string;
   loadingDotColor?: string;
 }) => {
   const styleContainer = document.documentElement.style;
   if (options.underLineThickness) styleContainer.setProperty('--tabBarUnderlineThickness', `${options.underLineThickness}px`);
   if (options.tabTextColor) styleContainer.setProperty('--tabBarTextColor', options.tabTextColor);
+  if (options.selectedTabTextColor) styleContainer.setProperty('--tabBarSelectedTextColor', options.selectedTabTextColor);
   if (options.underlineColor) styleContainer.setProperty('--tabBarUnderlineColor', options.underlineColor);
   if (options.loadingDotColor) styleContainer.setProperty('--tabBarLoadingDotColor', options.loadingDotColor);
   if (options.buttonSpacing) styleContainer.setProperty('--tabBarButtonSpacing', `${options.buttonSpacing}px`);
@@ -70,6 +75,7 @@ Demo.args = {
   buttonSpacing: 0,
   isLoading: false,
   underLineThickness: 2,
+  selectedTabTextColor:'grey',
   tabTextColor: 'black',
   underlineColor: 'black',
   loadingDotColor: 'black',
