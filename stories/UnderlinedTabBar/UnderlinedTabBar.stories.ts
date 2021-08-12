@@ -32,7 +32,8 @@ export default {
 const Template = (options: {
   buttonSpacing: number;
   itemClicked: number;
-  fontSize:number;
+  fontSize: number;
+  fontWeight: number;
   isLoading: boolean;
   underLineThickness?: number;
   mainBackgroundColor?: string;
@@ -49,6 +50,7 @@ const Template = (options: {
   if (options.loadingDotColor) styleContainer.setProperty('--tabBarLoadingDotColor', options.loadingDotColor);
   if (options.buttonSpacing) styleContainer.setProperty('--tabBarButtonSpacing', `${options.buttonSpacing}px`);
   if (options.fontSize) styleContainer.setProperty('--tabBarFontSize', `${options.fontSize}px`);
+  if (options.fontWeight) styleContainer.setProperty('--tabBarFontWeight', `${options.fontWeight}`);
 
   return html`
     
@@ -72,6 +74,7 @@ const Template = (options: {
 export const Demo = Template.bind({});
 Demo.args = {
   fontSize: 15,
+  fontWeight: 400,
   buttonSpacing: 0,
   isLoading: false,
   underLineThickness: 2,
