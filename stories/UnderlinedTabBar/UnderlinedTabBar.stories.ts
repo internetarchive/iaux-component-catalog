@@ -8,8 +8,11 @@ export default {
     underLineThick: {
       control: { type: 'range', min: 0, max: 10, step: 1 }
     },
-    mainBackgroundColor: {
-      control: { type: 'color' }
+    buttonSpacing: {
+      control: { type: 'range', min: 0, max: 10, step: 1 }
+    },
+    fontSize: {
+      control: { type: 'range', min: 0, max: 50, step: 1 }
     },
     tabTextColor: {
       control: { type: 'color' }
@@ -24,7 +27,9 @@ export default {
 };
 
 const Template = (options: {
+  buttonSpacing: number;
   itemClicked: number;
+  fontSize:number;
   isLoading: boolean;
   underLineThick?: number;
   mainBackgroundColor?: string;
@@ -33,11 +38,12 @@ const Template = (options: {
   loadingDotColor?: string;
 }) => {
   const styleContainer = document.documentElement.style;
-  if (options.underLineThick) styleContainer.setProperty('--underLineThick', `${options.underLineThick}px`);
-  if (options.mainBackgroundColor) styleContainer.setProperty('--mainBackgroundColor', options.mainBackgroundColor);
-  if (options.tabTextColor) styleContainer.setProperty('--tabTextColor', options.tabTextColor);
-  if (options.underlineColor) styleContainer.setProperty('--underlineColor', options.underlineColor);
-  if (options.loadingDotColor) styleContainer.setProperty('--loadingDotColor', options.loadingDotColor);
+  if (options.underLineThick) styleContainer.setProperty('--tabBarUnderlineThickness', `${options.underLineThick}px`);
+  if (options.tabTextColor) styleContainer.setProperty('--tabBarTextColor', options.tabTextColor);
+  if (options.underlineColor) styleContainer.setProperty('--tabBarUnderlineColor', options.underlineColor);
+  if (options.loadingDotColor) styleContainer.setProperty('--tabBarLoadingDotColor', options.loadingDotColor);
+  if (options.buttonSpacing) styleContainer.setProperty('--tabBarbuttonSpacing', `${options.buttonSpacing}px`);
+  if (options.fontSize) styleContainer.setProperty('--tabBarFontSize', `${options.fontSize}px`);
 
   return html`
     
@@ -60,10 +66,11 @@ const Template = (options: {
 
 export const Demo = Template.bind({});
 Demo.args = {
+  fontSize: 15,
+  buttonSpacing: 0,
   isLoading: false,
   underLineThick: 2,
-  mainBackgroundColor: '#a38064',
-  tabTextColor: '#e9ecf0',
-  underlineColor: '#e9ecf0',
-  loadingDotColor: '#e9ecf0',
+  tabTextColor: 'black',
+  underlineColor: 'black',
+  loadingDotColor: 'green',
 };
