@@ -6,10 +6,10 @@ export default {
   title: 'Demos/UnderlinedTabBar',
   argTypes: {
     underLineThick: {
-      control: { type: 'range', min: 0, max: 10, step: 1 }
+      control: { type: 'range', min: 0, max: 50, step: 1 }
     },
     buttonSpacing: {
-      control: { type: 'range', min: 0, max: 10, step: 1 }
+      control: { type: 'range', min: 0, max: 50, step: 1 }
     },
     fontSize: {
       control: { type: 'range', min: 0, max: 50, step: 1 }
@@ -42,7 +42,7 @@ const Template = (options: {
   if (options.tabTextColor) styleContainer.setProperty('--tabBarTextColor', options.tabTextColor);
   if (options.underlineColor) styleContainer.setProperty('--tabBarUnderlineColor', options.underlineColor);
   if (options.loadingDotColor) styleContainer.setProperty('--tabBarLoadingDotColor', options.loadingDotColor);
-  if (options.buttonSpacing) styleContainer.setProperty('--tabBarbuttonSpacing', `${options.buttonSpacing}px`);
+  if (options.buttonSpacing) styleContainer.setProperty('--tabBarButtonSpacing', `${options.buttonSpacing}px`);
   if (options.fontSize) styleContainer.setProperty('--tabBarFontSize', `${options.fontSize}px`);
 
   return html`
@@ -72,5 +72,5 @@ Demo.args = {
   underLineThick: 2,
   tabTextColor: 'black',
   underlineColor: 'black',
-  loadingDotColor: 'green',
+  loadingDotColor: 'black',
 };
