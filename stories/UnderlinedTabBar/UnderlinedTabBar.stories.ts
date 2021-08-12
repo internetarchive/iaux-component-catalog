@@ -5,7 +5,7 @@ import '@internetarchive/underlined-tab-bar';
 export default {
   title: 'Demos/UnderlinedTabBar',
   argTypes: {
-    underLineThick: {
+    underLineThickness: {
       control: { type: 'range', min: 0, max: 50, step: 1 }
     },
     buttonSpacing: {
@@ -31,14 +31,14 @@ const Template = (options: {
   itemClicked: number;
   fontSize:number;
   isLoading: boolean;
-  underLineThick?: number;
+  underLineThickness?: number;
   mainBackgroundColor?: string;
   tabTextColor?: string;
   underlineColor?: string;
   loadingDotColor?: string;
 }) => {
   const styleContainer = document.documentElement.style;
-  if (options.underLineThick) styleContainer.setProperty('--tabBarUnderlineThickness', `${options.underLineThick}px`);
+  if (options.underLineThickness) styleContainer.setProperty('--tabBarUnderlineThickness', `${options.underLineThickness}px`);
   if (options.tabTextColor) styleContainer.setProperty('--tabBarTextColor', options.tabTextColor);
   if (options.underlineColor) styleContainer.setProperty('--tabBarUnderlineColor', options.underlineColor);
   if (options.loadingDotColor) styleContainer.setProperty('--tabBarLoadingDotColor', options.loadingDotColor);
@@ -69,7 +69,7 @@ Demo.args = {
   fontSize: 15,
   buttonSpacing: 0,
   isLoading: false,
-  underLineThick: 2,
+  underLineThickness: 2,
   tabTextColor: 'black',
   underlineColor: 'black',
   loadingDotColor: 'black',
