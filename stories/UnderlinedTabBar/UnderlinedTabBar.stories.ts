@@ -41,6 +41,9 @@ const Template = (options: {
   selectedTabTextColor?: string;
   underlineColor?: string;
   loadingDotColor?: string;
+  loadingDotDiameter: number;
+  loadingDotSpacing: number;
+
 }) => {
   const styleContainer = document.documentElement.style;
   if (options.underLineThickness) styleContainer.setProperty('--tabBarUnderlineThickness', `${options.underLineThickness}px`);
@@ -51,6 +54,8 @@ const Template = (options: {
   if (options.buttonSpacing) styleContainer.setProperty('--tabBarButtonSpacing', `${options.buttonSpacing}px`);
   if (options.fontSize) styleContainer.setProperty('--tabBarFontSize', `${options.fontSize}px`);
   if (options.fontWeight) styleContainer.setProperty('--tabBarFontWeight', `${options.fontWeight}`);
+  if (options.loadingDotDiameter) styleContainer.setProperty('--tabBarLoadingDotDiameter', `${options.loadingDotDiameter}px`);
+  if (options.loadingDotSpacing) styleContainer.setProperty('--tabBarLoadingDotSpacing', `${options.loadingDotSpacing}px`);
 
   return html`
     
@@ -82,4 +87,6 @@ Demo.args = {
   tabTextColor: 'black',
   underlineColor: 'black',
   loadingDotColor: 'black',
+  loadingDotDiameter: 10,
+  loadingDotSpacing: 14,
 };
