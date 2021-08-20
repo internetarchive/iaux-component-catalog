@@ -1387,10 +1387,10 @@
     "@internetarchive/field-parsers" "^0.1.0"
     "@internetarchive/result-type" "^0.0.1"
 
-"@internetarchive/underlined-tab-bar@^0.0.1-alpha.9":
-  "integrity" "sha512-rHoqEolrsubWyO6jV6LTSQqVjT9UGULJjlfb/GzPA5dF24NDlvKX7LUO3eii1Xss+2tAOu4qFOurx44udNMnLA=="
-  "resolved" "https://registry.npmjs.org/@internetarchive/underlined-tab-bar/-/underlined-tab-bar-0.0.1-alpha.9.tgz"
-  "version" "0.0.1-alpha.9"
+"@internetarchive/underlined-tab-bar@^0.0.1-alpha.10":
+  "integrity" "sha512-A/C/n2MgGhTvxJerm8sB8NnRuD2FD+7tCWGU/T3O0lOw9kCmq6Tx3WapVzL1h2BH2sdt7+4OfqUAlNjLWcKHgQ=="
+  "resolved" "https://registry.npmjs.org/@internetarchive/underlined-tab-bar/-/underlined-tab-bar-0.0.1-alpha.10.tgz"
+  "version" "0.0.1-alpha.10"
   dependencies:
     "lit-element" "^2.2.1"
     "lit-html" "^1.1.2"

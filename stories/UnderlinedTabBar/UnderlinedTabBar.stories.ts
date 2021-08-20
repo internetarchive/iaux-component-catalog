@@ -20,6 +20,9 @@ export default {
     selectedTabTextColor: {
       control: { type: 'color' }
     },
+    hoverTabTextColor: {
+      control: { type: 'color' }
+    },
     underlineColor: {
       control: { type: 'color' }
     },
@@ -39,6 +42,7 @@ const Template = (options: {
   mainBackgroundColor?: string;
   tabTextColor?: string;
   selectedTabTextColor?: string;
+  hoverTabTextColor?: string;
   underlineColor?: string;
   loadingDotColor?: string;
   loadingDotDiameter: number;
@@ -49,6 +53,7 @@ const Template = (options: {
   if (options.underLineThickness) styleContainer.setProperty('--tabBarUnderlineThickness', `${options.underLineThickness}px`);
   if (options.tabTextColor) styleContainer.setProperty('--tabBarTextColor', options.tabTextColor);
   if (options.selectedTabTextColor) styleContainer.setProperty('--tabBarSelectedTextColor', options.selectedTabTextColor);
+  if (options.hoverTabTextColor) styleContainer.setProperty('--tabBarHoverTextColor', options.hoverTabTextColor);
   if (options.underlineColor) styleContainer.setProperty('--tabBarUnderlineColor', options.underlineColor);
   if (options.loadingDotColor) styleContainer.setProperty('--tabBarLoadingDotColor', options.loadingDotColor);
   if (options.buttonSpacing) styleContainer.setProperty('--tabBarButtonSpacing', `${options.buttonSpacing}px`);
@@ -84,6 +89,7 @@ Demo.args = {
   isLoading: false,
   underLineThickness: 2,
   selectedTabTextColor:'grey',
+  hoverTabTextColor:'pink',
   tabTextColor: 'black',
   underlineColor: 'black',
   loadingDotColor: 'black',
