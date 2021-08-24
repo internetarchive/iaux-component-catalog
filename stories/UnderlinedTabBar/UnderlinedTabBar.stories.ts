@@ -64,7 +64,7 @@ const Template = (options: {
 
   return html`
     
-    <iaux-underlined-tab-bar
+    <ia-underlined-tab-bar
       ?isLoading=${options.isLoading}
         onitemclicked=${options.itemClicked}
         .entries=${[
@@ -77,7 +77,7 @@ const Template = (options: {
         ]}
       >
       
-      </iaux-underlined-tab-bar>
+      </ia-underlined-tab-bar>
     `
 };
 
