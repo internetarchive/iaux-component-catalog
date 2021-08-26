@@ -5,7 +5,7 @@ import '@internetarchive/underlined-tab-bar';
 export default {
   title: 'Demos/UnderlinedTabBar',
   argTypes: {
-    underLineThickness: {
+    underlineThickness: {
       control: { type: 'range', min: 0, max: 50, step: 1 }
     },
     buttonSpacing: {
@@ -38,7 +38,7 @@ const Template = (options: {
   fontSize: number;
   fontWeight: number;
   isLoading: boolean;
-  underLineThickness?: number;
+  underlineThickness?: number;
   mainBackgroundColor?: string;
   tabTextColor?: string;
   selectedTabTextColor?: string;
@@ -50,7 +50,7 @@ const Template = (options: {
 
 }) => {
   const styleContainer = document.documentElement.style;
-  if (options.underLineThickness) styleContainer.setProperty('--tabBarUnderlineThickness', `${options.underLineThickness}px`);
+  if (options.underlineThickness) styleContainer.setProperty('--tabBarUnderlineThickness', `${options.underlineThickness}px`);
   if (options.tabTextColor) styleContainer.setProperty('--tabBarTextColor', options.tabTextColor);
   if (options.selectedTabTextColor) styleContainer.setProperty('--tabBarSelectedTextColor', options.selectedTabTextColor);
   if (options.hoverTabTextColor) styleContainer.setProperty('--tabBarHoverTextColor', options.hoverTabTextColor);
@@ -87,7 +87,7 @@ Demo.args = {
   fontWeight: 400,
   buttonSpacing: 0,
   isLoading: false,
-  underLineThickness: 2,
+  underlineThickness: 2,
   selectedTabTextColor:'grey',
   hoverTabTextColor:'pink',
   tabTextColor: 'black',
