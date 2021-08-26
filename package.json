@@ -26,7 +26,7 @@
     "@internetarchive/modal-manager": "^0.1.0",
     "@internetarchive/scrubber-bar": "^0.0.1",
     "@internetarchive/search-service": "^0.1.2",
-    "@internetarchive/underlined-tab-bar": "^0.0.1-alpha.11",
+    "@internetarchive/underlined-tab-bar": "^0.1.0",
     "@internetarchive/user-service": "^0.1.0",
     "@internetarchive/waveform-progress": "^0.0.1"
   }
