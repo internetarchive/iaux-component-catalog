@@ -1,0 +1,45 @@
+<Meta title="Demos/UnderlinedTabBar/Overview" />
+
+## Underlined Tab Bar
+
+The Underlined Tab Bar is a cross-browser Underlined Tab Bar that switches through tabs, dispatching events pretaining to the index that is clicked on.
+
+Repo: [https://github.com/internetarchive/iaux-underlined-tab-bar](https://github.com/internetarchive/iaux-underlined-tab-bar)
+
+NPM Module Name: [`@internetarchive/underlined-tab-bar`](https://www.npmjs.com/package/@internetarchive/underlined-tab-bar)
+
+Basic use:
+
+```
+<ia-underlined-tab-bar
+  onitemclicked="itemClicked()"
+  entries="[
+    { displayName: 'UPLOADS' },
+    { displayName: 'POSTS' },
+    { displayName: 'REVIEWS' },
+    { displayName: 'COLLECTIONS' },
+    { displayName: 'LOANS' },
+    { displayName: 'WEB ARCHIVE' },
+      ]"
+ >
+</ia-underlined-tab-bar>
+     
+function itemClicked(e) {
+    console.log(e.detail.index);
+  }
+```
+
+Advanced use:
+
+```
+// turn on loading state
+const tabBar = document.querySelector('underlined-tab-bar');
+tabBar.isLoading = true;
+
+// resize underline
+  tabBar.widthMultiplier=0.8;
+
+// select an index
+  tabBar.selectedIndex = 3;
+
+```
